@@ -1,0 +1,29 @@
+{
+  "name": "shoppingapp",
+  "version": "1.0.0",
+  "description": "A shopping list that helps users to share informations about product prices in different markets at real time and choose the cheaper.",
+  "main": "main.js",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "moment": "^2.29.3",
+    "pg": "^8.7.3",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuryamaral1/ShoppingApp.git"
+  },
+  "author": "Iury Amaral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iuryamaral1/ShoppingApp/issues"
+  },
+  "homepage": "https://github.com/iuryamaral1/ShoppingApp#readme"
+}
