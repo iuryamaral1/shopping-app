@@ -14,7 +14,14 @@ const findRoom = async (id) => {
     console.log(result)
 }
 
+const hasActiveShoppingList = async (room) => {
+    const q = "SELECT count(*) FROM shopping_list WHERE room = $1 AND active = true AND expiration_date > CURRENT_DATE"
+    const result = await db.query(q, [room])
+    return result.rows[0].count;
+}
+
 module.exports = {
     save,
-    findRoom
+    findRoom,
+    hasActiveShoppingList
 }

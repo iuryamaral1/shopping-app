@@ -12,13 +12,13 @@ const config = {
 
 const pool = new pg.Pool(config);
 
-async function query (q, p) {
+async function query (q, p=null) {
     const client = await pool.connect()
     let res
     try {
       await client.query('BEGIN')
       try {
-        res = await client.query(q, p)
+        res = p ? await client.query(q, p) : await client.query(q)
         await client.query('COMMIT')
       } catch (err) {
         await client.query('ROLLBACK')

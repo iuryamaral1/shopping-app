@@ -1,7 +1,5 @@
 const uuid = require('uuid');
-const moment = require('moment');
 const roomGateway = require('../gateways/roomGateway');
-
 
 const createNewRoom = async (socket, ...args) => {
     const room = {
