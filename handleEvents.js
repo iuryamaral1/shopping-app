@@ -17,7 +17,7 @@ const handle = (socket) => {
         if (hasList) {
             socket.emit('message', `The room ${room} already have an active shopping list`);
         } else {
-            const addedShoppingList = addNewShoppingList(JSON.parse(shoppingList))
+            const addedShoppingList = addNewShoppingList(JSON.parse(shoppingList, socket.id))
             socket.to(room).emit('message', `${socket.data.username} added a new shopping list`);
             socket.to(room).emit('receive-new-shopping-list', JSON.stringify(addedShoppingList));
         }

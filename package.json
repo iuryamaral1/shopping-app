@@ -6,6 +6,7 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "moment": "^2.29.3",
+    "node-pg-migrate": "^6.2.1",
     "pg": "^8.7.3",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",
@@ -14,7 +15,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node main.js",
+    "client": "node ./clients/client.js",
+    "migrate": "node-pg-migrate"
   },
   "repository": {
     "type": "git",
