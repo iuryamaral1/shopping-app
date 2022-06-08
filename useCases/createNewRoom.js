@@ -10,8 +10,6 @@ const createNewRoom = async (socket, ...args) => {
         products: []
     }
 
-    console.log('Creating room with data: ', room);
-
     await roomGateway.save(room)
 }
 
